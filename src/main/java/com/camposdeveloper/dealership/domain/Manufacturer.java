@@ -1,6 +1,6 @@
 package com.camposdeveloper.dealership.domain;
 
-public class Manufactorer {
+public class Manufacturer {
 	
 	private Long id;
 	private String name;
@@ -25,7 +25,7 @@ public class Manufactorer {
 
 	@Override
 	public String toString() {
-		return "Manufactorer [id=" + id + ", name=" + name + "]";
+		return "Manufacturer [id=" + id + ", name=" + name + "]";
 	}
 	
 }
