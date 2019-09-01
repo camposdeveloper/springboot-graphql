@@ -23,17 +23,4 @@ public class MotorcycleQuery implements GraphQLQueryResolver {
 		return motoService.findById(id);
 	}
 	
-//
-//	input MotorcycleInput {
-//		name: String!
-//	}
-//
-//	type Mutation {
-//		saveMotorcycle(input: motorcycle): Motorcycle
-//	}
-//
-//	type Query {
-//		findMotorcycle(Motorcycle: motorcycle): Motorcycle 
-//	}
-
 }

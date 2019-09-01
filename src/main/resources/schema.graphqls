@@ -10,10 +10,23 @@ input MotorcycleInput {
 	model: String
 }
 
+type Manufactorer {
+	id: ID
+	name: String
+}
+
+input ManufactorerInput {
+	id: ID
+	name: String
+}
+
 type Mutation {
 
 	# Mutation for Motorcycle
 	saveMotorcycle(moto: MotorcycleInput!): Motorcycle
+	
+	# Mutation for Manufactorer
+	saveManufactorer(manufactorer: ManufactorerInput!): Manufactorer
 	
 }
 	
@@ -25,5 +38,9 @@ type Query {
 	# Query's for Motorcycle
 	findMotorcycle: [Motorcycle]
 	findMotorcycleById(id: Int!): Motorcycle
+	
+	# Query's for Manufactorer
+	findManufactorer: [Manufactorer]
+	findManufactorerById(id: Int!): Manufactorer
 	
 }
