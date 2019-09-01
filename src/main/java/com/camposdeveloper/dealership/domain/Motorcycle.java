@@ -5,11 +5,11 @@ import java.util.Date;
 public class Motorcycle {
 	
 	private Long id;
-	private String manufacturer;
 	private String model;
 	private Date year;
 	private String color;
 	private Integer km;
+	private Manufacturer manufacturer;
 	
 	/*
 	 * Get's and Set's
@@ -20,13 +20,6 @@ public class Motorcycle {
 	}
 	public void setId(Long id) {
 		this.id = id;
-	}
-	
-	public String getManufacturer() {
-		return manufacturer;
-	}
-	public void setManufacturer(String manufacturer) {
-		this.manufacturer = manufacturer;
 	}
 	
 	public String getModel() {
@@ -57,10 +50,17 @@ public class Motorcycle {
 		this.km = km;
 	}
 
+	public Manufacturer getManufacturer() {
+		return manufacturer;
+	}
+	public void setManufacturer(Manufacturer manufacturer) {
+		this.manufacturer = manufacturer;
+	}
+	
 	@Override
 	public String toString() {
-		return "Motorcycle [id=" + id + ", manufacturer=" + manufacturer + ", model=" + model + ", year=" + year
-				+ ", color=" + color + ", km=" + km + "]";
+		return "Motorcycle [id=" + id + ", model=" + model + ", year=" + year
+				+ ", color=" + color + ", km=" + km + ", manufacturer=" + manufacturer + "]";
 	}
 
 }
