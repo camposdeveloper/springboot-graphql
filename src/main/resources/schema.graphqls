@@ -1,0 +1,29 @@
+type Motorcycle {
+	id: ID
+	manufacturer: String
+	model: String
+}
+
+input MotorcycleInput {
+	id: ID
+	manufacturer: String
+	model: String
+}
+
+type Mutation {
+
+	# Mutation for Motorcycle
+	saveMotorcycle(moto: MotorcycleInput!): Motorcycle
+	
+}
+	
+type Query {
+
+	# Query for api
+	getStatus: String
+	
+	# Query's for Motorcycle
+	findMotorcycle: [Motorcycle]
+	findMotorcycleById(id: Int!): Motorcycle
+	
+}
