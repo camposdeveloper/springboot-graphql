@@ -13,7 +13,7 @@ input MotorcycleInput {
 type Manufacturer {
 	id: ID
 	name: String
-	contactId: Int
+	contact: Contact
 }
 
 input ManufacturerInput {
