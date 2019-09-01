@@ -18,6 +18,10 @@ public class MotorcycleService {
 		return moto;
 	}
 	
+	public List<Motorcycle> findAll() {
+		return listMotorcycle;
+	}
+	
 	public Motorcycle findById(Long id) {
 		for(Motorcycle moto : listMotorcycle) {
 			if(moto.getId().equals(id)) return moto;
@@ -25,9 +29,4 @@ public class MotorcycleService {
 		return null;
 	}
 	
-	public List<Motorcycle> findAll() {
-		return listMotorcycle;
-	}
-	
-
 }
