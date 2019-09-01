@@ -13,11 +13,13 @@ input MotorcycleInput {
 type Manufacturer {
 	id: ID
 	name: String
+	contact: Contact
 }
 
 input ManufacturerInput {
 	id: ID
 	name: String!
+	contactId: Int!
 }
 
 type Contact {
