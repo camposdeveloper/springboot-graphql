@@ -4,6 +4,7 @@ public class Manufacturer {
 	
 	private Long id;
 	private String name;
+	private Long contactId;
 	
 	/*
 	 * Get's and Set's
@@ -23,9 +24,16 @@ public class Manufacturer {
 		this.name = name;
 	}
 
+	public Long getContactId() {
+		return contactId;
+	}
+	public void setContactId(Long contactId) {
+		this.contactId = contactId;
+	}
+	
 	@Override
 	public String toString() {
-		return "Manufacturer [id=" + id + ", name=" + name + "]";
+		return "Manufacturer [id=" + id + ", name=" + name + ", contactId=" + contactId + "]";
 	}
 	
 }
