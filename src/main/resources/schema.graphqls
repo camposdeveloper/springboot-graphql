@@ -14,12 +14,14 @@ type Manufacturer {
 	id: ID
 	name: String
 	contact: Contact
+	address: Address
 }
 
 input ManufacturerInput {
 	id: ID
 	name: String!
 	contactId: Int!
+	addressId: Int!
 }
 
 type Contact {
@@ -36,6 +38,28 @@ input ContactInput {
 	cellphone: String!
 }
 
+type Address {
+	id: ID
+	type: String
+	name: String
+	number: Int
+	neighborhood: String
+	city: String
+	state: String
+	country: String
+}
+
+input AddressInput {
+	id: ID
+	type: String
+	name: String
+	number: Int
+	neighborhood: String
+	city: String
+	state: String
+	country: String
+}
+
 type Mutation {
 
 	# Mutation for Motorcycle
@@ -46,6 +70,9 @@ type Mutation {
 	
 	# Mutation for Contact
 	saveContact(contact: ContactInput): Contact
+	
+	# Mutation for Address
+	saveAddress(address: AddressInput): Address
 	
 }
 	
@@ -65,5 +92,9 @@ type Query {
 	# Query's for Contact
 	findContact: [Contact]
 	findContactById(id: Int): Contact
+	
+	# Query's for Address
+	findAddress: [Address]
+	findAddressById(id: Int): Address
 	
 }

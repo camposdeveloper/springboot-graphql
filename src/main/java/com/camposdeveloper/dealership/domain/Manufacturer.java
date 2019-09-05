@@ -5,6 +5,7 @@ public class Manufacturer {
 	private Long id;
 	private String name;
 	private Long contactId;
+	private Long addressId;
 	
 	/*
 	 * Get's and Set's
@@ -29,6 +30,13 @@ public class Manufacturer {
 	}
 	public void setContactId(Long contactId) {
 		this.contactId = contactId;
+	}
+	
+	public Long getAddressId() {
+		return addressId;
+	}
+	public void setAddressId(Long addressId) {
+		this.addressId = addressId;
 	}
 	
 	@Override
