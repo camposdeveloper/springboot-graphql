@@ -81,20 +81,24 @@ type Query {
 	# Query for api
 	getStatus: String
 	
-	# Query's for Motorcycle
+	# Queries for Motorcycle
 	findMotorcycle: [Motorcycle]
 	findMotorcycleById(id: Int!): Motorcycle
 	
-	# Query's for Manufacturer
+	# Queries for Manufacturer
 	findManufacturer: [Manufacturer]
 	findManufacturerById(id: Int!): Manufacturer
 	
-	# Query's for Contact
+	# Queries for Contact
 	findContact: [Contact]
 	findContactById(id: Int): Contact
 	
-	# Query's for Address
+	# Queries for Address
 	findAddress: [Address]
 	findAddressById(id: Int): Address
+	
+	# Queries for tests
+	getListString (list: [String]): [String]
+	getListInteger(list: [Int]   ): [Int]
 	
 }
